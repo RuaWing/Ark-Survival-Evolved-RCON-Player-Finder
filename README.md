@@ -16,7 +16,7 @@ For this program to function, the ark server you connect to must have two pre-re
 This project has two dependencies that must be installed to run.
 
 - https://github.com/JamesNK/Newtonsoft.Json
-- https://github.com/Challengermode/CoreRcon
+- https://github.com/stefanodriussi/rconsharp
 
 
 To connect to the server, the config.json.template file must be renamed to config.json and configured with the desired connection information. 
