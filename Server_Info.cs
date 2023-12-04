@@ -318,7 +318,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                 }
 
                 // Add the player name and information to the player list text box.
-                RichTextBox_local_list_textbox!.AppendText(player.name + " lat: " + lat.ToString() + " , lon: " + lon.ToString() + "\n");
+                RichTextBox_local_list_textbox!.AppendText(player.name + " lat: " + lat.ToString("F2") + " , lon: " + lon.ToString("F2") + "\n");
 
                 // Calculate screen offsets for the map UI image. (May be an imperfect fit, adjust to your use case.)
                 float red_dot_pos_width = 700 + (lon * 6);
