@@ -66,21 +66,21 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                 Label label_server_ip = new();
 
                 label_server_name.AutoSize = true;
-                label_server_name.Location = new System.Drawing.Point(10, 142);
+                label_server_name.Location = new System.Drawing.Point(10, 42);
                 label_server_name.Name = "Server Name";
                 label_server_name.Size = new System.Drawing.Size(50, 20);
                 label_server_name.TabIndex = 7;
                 label_server_name.Text = "Server Name: " + server.name;
 
                 label_server_port.AutoSize = true;
-                label_server_port.Location = new System.Drawing.Point(10, 162);
+                label_server_port.Location = new System.Drawing.Point(10, 62);
                 label_server_port.Name = "Server Port";
                 label_server_port.Size = new System.Drawing.Size(50, 20);
                 label_server_port.TabIndex = 8;
                 label_server_port.Text = "Server Port: " + server.port;
 
                 label_server_ip.AutoSize = true;
-                label_server_ip.Location = new System.Drawing.Point(10, 182);
+                label_server_ip.Location = new System.Drawing.Point(10, 82);
                 label_server_ip.Name = "Server IP: ";
                 label_server_ip.Size = new System.Drawing.Size(50, 20);
                 label_server_ip.TabIndex = 9;
@@ -94,9 +94,9 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
 
                 RichTextBox richTextBox_player_list = new()
                 {
-                    Location = new System.Drawing.Point(10, 250),
+                    Location = new System.Drawing.Point(10, 150),
                     Name = "richTextBox_" + server.name,
-                    Size = new System.Drawing.Size(600, 500),
+                    Size = new System.Drawing.Size(300, 400),
                     TabIndex = 6,
                     Text = ""
                 };
@@ -118,7 +118,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                 PictureBox pictureBox_map = new()
                 {
                     Name = "picturebox_" + name,
-                    Location = new System.Drawing.Point(700, 10),
+                    Location = new System.Drawing.Point(350, 10),
                     Size = new System.Drawing.Size(600, 600),
                     TabIndex = 6,
                     TabStop = false

@@ -28,85 +28,91 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tab_page_config = new System.Windows.Forms.TabPage();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox_set_name = new System.Windows.Forms.TextBox();
-            this.label_set_name = new System.Windows.Forms.Label();
-            this.button_connect = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tab_page_config.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.SuspendLayout();
+            tab_page_config = new TabPage();
+            richTextBox1 = new RichTextBox();
+            textBox_set_name = new TextBox();
+            label_set_name = new Label();
+            button_connect = new Button();
+            tabControl1 = new TabControl();
+            tab_page_config.SuspendLayout();
+            tabControl1.SuspendLayout();
+            SuspendLayout();
             // 
             // tab_page_config
             // 
-            this.tab_page_config.Controls.Add(this.richTextBox1);
-            this.tab_page_config.Controls.Add(this.textBox_set_name);
-            this.tab_page_config.Controls.Add(this.label_set_name);
-            this.tab_page_config.Controls.Add(this.button_connect);
-            this.tab_page_config.Location = new System.Drawing.Point(4, 29);
-            this.tab_page_config.Name = "tab_page_config";
-            this.tab_page_config.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_page_config.Size = new System.Drawing.Size(1532, 851);
-            this.tab_page_config.TabIndex = 0;
-            this.tab_page_config.Text = "Config";
-            this.tab_page_config.UseVisualStyleBackColor = true;
+            tab_page_config.Controls.Add(richTextBox1);
+            tab_page_config.Controls.Add(textBox_set_name);
+            tab_page_config.Controls.Add(label_set_name);
+            tab_page_config.Controls.Add(button_connect);
+            tab_page_config.Location = new Point(4, 24);
+            tab_page_config.Margin = new Padding(3, 2, 3, 2);
+            tab_page_config.Name = "tab_page_config";
+            tab_page_config.Padding = new Padding(3, 2, 3, 2);
+            tab_page_config.Size = new Size(1340, 635);
+            tab_page_config.TabIndex = 0;
+            tab_page_config.Text = "Config";
+            tab_page_config.UseVisualStyleBackColor = true;
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(291, 6);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(1235, 842);
-            this.richTextBox1.TabIndex = 6;
-            this.richTextBox1.Text = "";
+            richTextBox1.Location = new Point(255, 4);
+            richTextBox1.Margin = new Padding(3, 2, 3, 2);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(1081, 632);
+            richTextBox1.TabIndex = 6;
+            richTextBox1.Text = "";
             // 
             // textBox_set_name
             // 
-            this.textBox_set_name.Location = new System.Drawing.Point(142, 49);
-            this.textBox_set_name.Name = "textBox_set_name";
-            this.textBox_set_name.Size = new System.Drawing.Size(125, 27);
-            this.textBox_set_name.TabIndex = 4;
+            textBox_set_name.Location = new Point(124, 37);
+            textBox_set_name.Margin = new Padding(3, 2, 3, 2);
+            textBox_set_name.Name = "textBox_set_name";
+            textBox_set_name.Size = new Size(110, 23);
+            textBox_set_name.TabIndex = 4;
             // 
             // label_set_name
             // 
-            this.label_set_name.AutoSize = true;
-            this.label_set_name.Location = new System.Drawing.Point(10, 52);
-            this.label_set_name.Name = "label_set_name";
-            this.label_set_name.Size = new System.Drawing.Size(126, 20);
-            this.label_set_name.TabIndex = 5;
-            this.label_set_name.Text = "Your Player Name";
+            label_set_name.AutoSize = true;
+            label_set_name.Location = new Point(9, 39);
+            label_set_name.Name = "label_set_name";
+            label_set_name.Size = new Size(100, 15);
+            label_set_name.TabIndex = 5;
+            label_set_name.Text = "Your Player Name";
             // 
             // button_connect
             // 
-            this.button_connect.Location = new System.Drawing.Point(142, 94);
-            this.button_connect.Name = "button_connect";
-            this.button_connect.Size = new System.Drawing.Size(94, 29);
-            this.button_connect.TabIndex = 0;
-            this.button_connect.Text = "Connect";
-            this.button_connect.UseVisualStyleBackColor = true;
-            this.button_connect.Click += new System.EventHandler(this.Button_connect_Click);
+            button_connect.Location = new Point(124, 70);
+            button_connect.Margin = new Padding(3, 2, 3, 2);
+            button_connect.Name = "button_connect";
+            button_connect.Size = new Size(82, 22);
+            button_connect.TabIndex = 0;
+            button_connect.Text = "Connect";
+            button_connect.UseVisualStyleBackColor = true;
+            button_connect.Click += Button_connect_Click;
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tab_page_config);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1540, 884);
-            this.tabControl1.TabIndex = 0;
+            tabControl1.Controls.Add(tab_page_config);
+            tabControl1.Location = new Point(10, 9);
+            tabControl1.Margin = new Padding(3, 2, 3, 2);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(1348, 663);
+            tabControl1.TabIndex = 0;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1564, 908);
-            this.Controls.Add(this.tabControl1);
-            this.Name = "Ark Player Finder";
-            this.Text = "Ark Player Finder";
-            this.tab_page_config.ResumeLayout(false);
-            this.tab_page_config.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1008, 681);
+            Controls.Add(tabControl1);
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "Form1";
+            Text = "Ark Player Finder";
+            tab_page_config.ResumeLayout(false);
+            tab_page_config.PerformLayout();
+            tabControl1.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion
