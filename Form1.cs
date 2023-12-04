@@ -119,7 +119,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                 {
                     Name = "picturebox_" + name,
                     Location = new System.Drawing.Point(700, 10),
-                    Size = new System.Drawing.Size(800, 800),
+                    Size = new System.Drawing.Size(600, 600),
                     TabIndex = 6,
                     TabStop = false
                 };
