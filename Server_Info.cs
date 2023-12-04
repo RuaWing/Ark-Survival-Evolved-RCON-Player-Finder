@@ -322,7 +322,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
 
                 // Calculate screen offsets for the map UI image. (May be an imperfect fit, adjust to your use case.)
                 float red_dot_pos_width = 700 + (lon * 8);
-                float red_dot_pos_height = 50 + (lat * 8);
+                float red_dot_pos_height = 10 + (lat * 8);
 
 
                 // before drawing the player dots and names UI features, first identify if the player is a friendly player.
