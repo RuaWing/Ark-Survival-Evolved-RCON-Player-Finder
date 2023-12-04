@@ -155,6 +155,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
 
         // Creates the UI dots and lables for each player.
         // Forumlas used to convert UE4 coordinates to ark lat / lon coordinates can be found at https://ark.fandom.com/wiki/Coordinates as of 01/09/2022
+        // New source of information on coordinate transformations https://ark.wiki.gg/wiki/Coordinates as of 04/12/2023
         // This function will attempt to convert coordinates for each map.
         private void Create_player_dots(Player_info player)
         {
@@ -221,8 +222,8 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                     shift_x = 50f;
                     shift_y = 50f;
 
-                    mult_x = 8000f;
-                    mult_y = 8000f;
+                    mult_x = 7141f;
+                    mult_y = 7141f;
 
                     lat = shift_y + (player.y / mult_y);
                     lon = shift_x + (player.x / mult_x);
