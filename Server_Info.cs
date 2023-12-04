@@ -90,7 +90,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
             // Tell the timer what to do when it elapses
             send_command_timer.Elapsed += (sender, e) => Send_command_to_Server(sender!, e);
             // Set it to go off every 2 seconds and repeat.
-            send_command_timer.Interval = 500;
+            send_command_timer.Interval = 2000;
             send_command_timer.Enabled = false;
             send_command_timer.AutoReset = true;
         }
