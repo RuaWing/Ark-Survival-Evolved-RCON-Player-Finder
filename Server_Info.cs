@@ -449,7 +449,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                 {
                     // get the vector
                     string vector = line.Split("), X=")[1];
-                    string name = line.Split("), X=")[0];
+                    string name = line.Split(", X=")[0];
 
                     // create a new player object to add the players info to.
                     Player_info player = new()
