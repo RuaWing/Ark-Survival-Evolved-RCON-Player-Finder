@@ -369,7 +369,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                         AutoSize = true,
                         Location = new System.Drawing.Point((int)red_dot_pos_width + 10, (int)red_dot_pos_height),
                         Size = new System.Drawing.Size(100, 20),
-                        Text = player.name
+                        Text = player.simpleName
                     };
 
                     tab.Controls.Add(label_player_name);
@@ -401,7 +401,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                         AutoSize = true,
                         Location = new System.Drawing.Point((int)red_dot_pos_width + 10, (int)red_dot_pos_height),
                         Size = new System.Drawing.Size(100, 20),
-                        Text = player.name
+                        Text = player.simpleName
                     };
 
                     tab.Controls.Add(label_player_name);
@@ -460,6 +460,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                     // create a new player object to add the players info to.
                     Player_info player = new()
                     {
+                        simpleName = name.Split(" - ")[0],
                         name = name,
                         x = float.Parse(vector.Split("Y=")[0]),
                         y = float.Parse(vector.Split("Y=")[1].Split("Z=")[0]),
@@ -480,6 +481,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
     // player_info struct that contains information on the player
     public struct Player_info
     {
+        public string simpleName = "";
         public string name = "";
 
         public float x = 0;
