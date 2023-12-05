@@ -10,84 +10,96 @@
 
 	"servers": [
 		{
-			"name": "aberration",
+			"serverName": "your server name",
+			"mapName": "aberration",
 			"ip": "your IP",
 			"port": "your port",
 			"password": "your password"
 
 		},
 		{
-			"name": "the center",
+			"serverName": "your server name",
+			"mapName": "the center",
 			"ip": "your IP",
 			"port": "your port",
 			"password": "your password"
 
 		},
 		{
-			"name": "crystal",
+			"serverName": "your server name",
+			"mapName": "crystal",
 			"ip": "your IP",
 			"port": "your port",
 			"password": "your password"
 
 		},
 		{
-			"name": "extinction",
+			"serverName": "your server name",
+			"mapName": "extinction",
 			"ip": "your IP",
 			"port": "your port",
 			"password": "your password"
 
 		},
 		{
-			"name": "fjordur",
+			"serverName": "your server name",
+			"mapName": "fjordur",
 			"ip": "your IP",
 			"port": "your port",
 			"password": "your password"
 
 		},
 		{
-			"name": "genesis 1",
+			"serverName": "your server name",
+			"mapName": "genesis 1",
 			"ip": "your IP",
 			"port": "your port",
 			"password": "your password"
 
 		},
 		{
-			"name": "genesis 2",
+			"serverName": "your server name",
+			"mapName": "genesis 2",
 			"ip": "your IP",
 			"port": "your port",
 			"password": "your password"
 
 		},
 		{
-			"name": "the island",
+			"serverName": "your server name",
+			"mapName": "the island",
 			"ip": "your IP",
 			"port": "your port",
 			"password": "your password"
 
 		},
 		{
-			"name": "lost island",
+			"serverName": "your server name",
+			"mapName": "lost island",
 			"ip": "your IP",
 			"port": "your port",
 			"password": "your password"
 
 		},
 		{
-			"name": "ragnarok",
+			"serverName": "your server name",
+			"mapName": "ragnarok",
 			"ip": "your IP",
 			"port": "your port",
 			"password": "your password"
 
 		},
 		{
-			"name": "scorched earth",
+			"serverName": "your server name",
+			"mapName": "scorched earth",
 			"ip": "your IP",
 			"port": "your port",
 			"password": "your password"
 
 		},
 		{
-			"name": "valguero",
+			"serverName": "your server name",
+			"mapName": "valguero",
 			"ip": "your IP",
 			"port": "your port",
 			"password": "your password"

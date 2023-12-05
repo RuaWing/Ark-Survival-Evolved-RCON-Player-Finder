@@ -37,7 +37,8 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
             // iterate over each server and create a new Server_Info instance with the data scraped from the config.json file.
             foreach (JObject item in server_info!)
             {
-                string? name = item.GetValue("name")?.ToString();
+                string? serverName = item.GetValue("serverName")?.ToString();
+                string? mapName = item.GetValue("mapName")?.ToString();
                 string? ip = item.GetValue("ip")?.ToString();
                 int? port = (int?)item.GetValue("port");
                 string? password = item.GetValue("password")?.ToString();
@@ -45,7 +46,8 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                 // add new server to the server list;
                 Server_Info server = new()
                 {
-                    name = name,
+                    serverName = serverName,
+                    mapName = mapName,
                     ip = ip,
                     port = port,
                     password = password,
@@ -56,37 +58,46 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                 // add each tab
                 TabPage tabPage = new()
                 {
-                    Text = name
+                    Text = $"{serverName}"
                 };
                 tabControl1.Controls.Add(tabPage);
 
                 // add server info
                 Label label_server_name = new();
+                Label label_map_name = new();
                 Label label_server_port = new();
                 Label label_server_ip = new();
 
                 label_server_name.AutoSize = true;
-                label_server_name.Location = new System.Drawing.Point(10, 42);
+                label_server_name.Location = new System.Drawing.Point(10, 22);
                 label_server_name.Name = "Server Name";
                 label_server_name.Size = new System.Drawing.Size(50, 20);
                 label_server_name.TabIndex = 7;
-                label_server_name.Text = "Server Name: " + server.name;
+                label_server_name.Text = "Server Name: " + server.serverName;
+
+                label_map_name.AutoSize = true;
+                label_map_name.Location = new System.Drawing.Point(10, 42);
+                label_map_name.Name = "Map Name";
+                label_map_name.Size = new System.Drawing.Size(50, 20);
+                label_map_name.TabIndex = 8;
+                label_map_name.Text = "Map Name: " + server.mapName;
 
                 label_server_port.AutoSize = true;
                 label_server_port.Location = new System.Drawing.Point(10, 62);
                 label_server_port.Name = "Server Port";
                 label_server_port.Size = new System.Drawing.Size(50, 20);
-                label_server_port.TabIndex = 8;
+                label_server_port.TabIndex = 9;
                 label_server_port.Text = "Server Port: " + server.port;
 
                 label_server_ip.AutoSize = true;
                 label_server_ip.Location = new System.Drawing.Point(10, 82);
                 label_server_ip.Name = "Server IP: ";
                 label_server_ip.Size = new System.Drawing.Size(50, 20);
-                label_server_ip.TabIndex = 9;
+                label_server_ip.TabIndex = 10;
                 label_server_ip.Text = "Server IP: " + server.ip;
 
                 tabPage.Controls.Add(label_server_name);
+                tabPage.Controls.Add(label_map_name);
                 tabPage.Controls.Add(label_server_port);
                 tabPage.Controls.Add(label_server_ip);
 
@@ -95,7 +106,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                 RichTextBox richTextBox_player_list = new()
                 {
                     Location = new System.Drawing.Point(10, 150),
-                    Name = "richTextBox_" + server.name,
+                    Name = "richTextBox_" + server.mapName,
                     Size = new System.Drawing.Size(300, 400),
                     TabIndex = 6,
                     Text = ""
@@ -117,7 +128,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                 // add picture box
                 PictureBox pictureBox_map = new()
                 {
-                    Name = "picturebox_" + name,
+                    Name = "picturebox_" + mapName,
                     Location = new System.Drawing.Point(350, 10),
                     Size = new System.Drawing.Size(600, 600),
                     TabIndex = 6,
@@ -126,7 +137,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
 
                 server.tab = tabPage;
 
-                string map_image_file_name = "media/" + name + ".jpg";
+                string map_image_file_name = "media/" + mapName + ".jpg";
 
                 pictureBox_map.Image = Image.FromFile(map_image_file_name);
                 pictureBox_map.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -146,7 +157,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
             {
                 //find the player list textbox to write back to
                 // asign it to the server
-                server.RichTextBox_local_list_textbox = (RichTextBox?)tabControl1.Controls.Find("richTextBox_" + server.name, true).FirstOrDefault();
+                server.RichTextBox_local_list_textbox = (RichTextBox?)tabControl1.Controls.Find("richTextBox_" + server.mapName, true).FirstOrDefault();
                 server.send_command_timer.Enabled = true;
             }
         }
@@ -157,7 +168,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
             {
                 //find the player list textbox to write back to
                 // asign it to the server
-                server.RichTextBox_local_list_textbox = (RichTextBox?)tabControl1.Controls.Find("richTextBox_" + server.name, true).FirstOrDefault();
+                server.RichTextBox_local_list_textbox = (RichTextBox?)tabControl1.Controls.Find("richTextBox_" + server.mapName, true).FirstOrDefault();
                 server.send_command_timer.Interval = (double)this.intervalNumericUpDown1.Value;
             }
         }

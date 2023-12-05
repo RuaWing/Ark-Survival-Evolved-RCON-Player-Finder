@@ -9,9 +9,15 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
     {
         /// <summary>
         /// Name that is taken from the config.json file. 
-        /// Is used to set the title of each map/server.
+        /// Is used to set the title of each map.
         /// </summary>
-        public string? name = "";
+        public string? mapName = "";
+
+        /// <summary>
+        /// Name that is taken from the config.json file. 
+        /// Is used to set the title of each server.
+        /// </summary>
+        public string? serverName = "";
 
         /// <summary>
         /// IP address that is taken from the config.json file. 
@@ -173,7 +179,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                 float lat = 0;
                 float lon = 0;
 
-                if (this.name == "the center")
+                if (this.mapName == "the center")
                 {
                     shift_x = 55.1f;
                     shift_y = 30.34f;
@@ -184,7 +190,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                     lat = shift_y + (player.y / mult_y);
                     lon = shift_x + (player.x / mult_x);
                 }
-                else if (this.name == "aberration")
+                else if (this.mapName == "aberration")
                 {
                     shift_x = 50;
                     shift_y = 50;
@@ -195,7 +201,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                     lat = shift_y + (player.y / mult_y);
                     lon = shift_x + (player.x / mult_x);
                 }
-                else if (this.name == "crystal")
+                else if (this.mapName == "crystal")
                 {
                     shift_x = 48.75f;
                     shift_y = 50f;
@@ -206,7 +212,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                     lat = shift_y + (player.y / mult_y);
                     lon = shift_x + (player.x / mult_x);
                 }
-                else if (this.name == "extinction")
+                else if (this.mapName == "extinction")
                 {
                     shift_x = 50f;
                     shift_y = 50f;
@@ -217,7 +223,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                     lat = shift_y + (player.y / mult_y);
                     lon = shift_x + (player.x / mult_x);
                 }
-                else if (this.name == "fjordur")
+                else if (this.mapName == "fjordur")
                 {
                     shift_x = 50f;
                     shift_y = 50f;
@@ -228,7 +234,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                     lat = shift_y + (player.y / mult_y);
                     lon = shift_x + (player.x / mult_x);
                 }
-                else if (this.name == "genesis 1")
+                else if (this.mapName == "genesis 1")
                 {
                     shift_x = 50f;
                     shift_y = 50f;
@@ -239,7 +245,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                     lat = shift_y + (player.y / mult_y);
                     lon = shift_x + (player.x / mult_x);
                 }
-                else if (this.name == "genesis 2")
+                else if (this.mapName == "genesis 2")
                 {
                     shift_x = 49.655f;
                     shift_y = 49.655f;
@@ -250,7 +256,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                     lat = shift_y + (player.y / mult_y);
                     lon = shift_x + (player.x / mult_x);
                 }
-                else if (this.name == "the island")
+                else if (this.mapName == "the island")
                 {
                     shift_x = 50f;
                     shift_y = 50f;
@@ -261,7 +267,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                     lat = shift_y + (player.y / mult_y);
                     lon = shift_x + (player.x / mult_x);
                 }
-                else if (this.name == "the island")
+                else if (this.mapName == "the island")
                 {
                     shift_x = 50f;
                     shift_y = 50f;
@@ -272,7 +278,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                     lat = shift_y + (player.y / mult_y);
                     lon = shift_x + (player.x / mult_x);
                 }
-                else if (this.name == "lost island")
+                else if (this.mapName == "lost island")
                 {
                     shift_x = 51.634f;
                     shift_y = 49.02f;
@@ -283,7 +289,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                     lat = shift_y + (player.y / mult_y);
                     lon = shift_x + (player.x / mult_x);
                 }
-                else if (this.name == "ragnarok")
+                else if (this.mapName == "ragnarok")
                 {
                     shift_x = 50;
                     shift_y = 50;
@@ -294,7 +300,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                     lat = shift_y + (player.y / mult_y);
                     lon = shift_x + (player.x / mult_x);
                 }
-                else if (this.name == "scorched earth")
+                else if (this.mapName == "scorched earth")
                 {
                     shift_x = 50;
                     shift_y = 50;
@@ -305,7 +311,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                     lat = shift_y + (player.y / mult_y);
                     lon = shift_x + (player.x / mult_x);
                 }
-                else if (this.name == "valguero")
+                else if (this.mapName == "valguero")
                 {
                     shift_x = 50;
                     shift_y = 50;
