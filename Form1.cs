@@ -158,6 +158,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                 //find the player list textbox to write back to
                 // asign it to the server
                 server.RichTextBox_local_list_textbox = (RichTextBox?)tabControl1.Controls.Find("richTextBox_" + server.serverName + server.mapName, true).FirstOrDefault();
+                server.send_command_timer.Interval = (double)this.intervalNumericUpDown1.Value;
                 server.send_command_timer.Enabled = true;
             }
         }
@@ -166,9 +167,6 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
         {
             foreach (Server_Info server in servers)
             {
-                //find the player list textbox to write back to
-                // asign it to the server
-                server.RichTextBox_local_list_textbox = (RichTextBox?)tabControl1.Controls.Find("richTextBox_" + server.serverName + server.mapName, true).FirstOrDefault();
                 server.send_command_timer.Interval = (double)this.intervalNumericUpDown1.Value;
             }
         }
