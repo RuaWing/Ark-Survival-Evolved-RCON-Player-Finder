@@ -369,6 +369,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                         AutoSize = true,
                         Location = new System.Drawing.Point((int)red_dot_pos_width + 10, (int)red_dot_pos_height),
                         Size = new System.Drawing.Size(100, 20),
+                        TextAlign = ContentAlignment.MiddleCenter,
                         Text = player.simpleName
                     };
 
@@ -401,6 +402,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                         AutoSize = true,
                         Location = new System.Drawing.Point((int)red_dot_pos_width + 10, (int)red_dot_pos_height),
                         Size = new System.Drawing.Size(100, 20),
+                        TextAlign = ContentAlignment.MiddleCenter,
                         Text = player.simpleName
                     };
 

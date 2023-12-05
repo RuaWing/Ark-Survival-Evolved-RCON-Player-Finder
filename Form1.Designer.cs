@@ -90,6 +90,7 @@
             label1.Size = new Size(49, 15);
             label1.TabIndex = 7;
             label1.Text = "Interlval";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // richTextBox1
             // 
