@@ -352,10 +352,11 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                     {
                         Name = "dot",
                         Location = new System.Drawing.Point((int)red_dot_pos_width, (int)red_dot_pos_height),
-                        Size = new System.Drawing.Size(10, 10),
+                        Size = new System.Drawing.Size(8, 8),
                         TabStop = false,
                         Image = Image.FromFile("media/red_dot.png"),
-                        SizeMode = PictureBoxSizeMode.StretchImage
+                        SizeMode = PictureBoxSizeMode.StretchImage,
+                        BackColor = Color.Transparent
                     };
 
                     tab.Controls.Add(pictureBox_dot);
@@ -367,7 +368,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                     {
                         Name = "dot", // named dot so it gets deleted
                         AutoSize = true,
-                        Location = new System.Drawing.Point((int)red_dot_pos_width + 10, (int)red_dot_pos_height),
+                        Location = new System.Drawing.Point((int)red_dot_pos_width + 15, (int)red_dot_pos_height + 5),
                         Size = new System.Drawing.Size(100, 20),
                         TextAlign = ContentAlignment.MiddleCenter,
                         Text = player.simpleName
@@ -385,10 +386,11 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                     {
                         Name = "dot",
                         Location = new System.Drawing.Point((int)red_dot_pos_width, (int)red_dot_pos_height),
-                        Size = new System.Drawing.Size(10, 10),
+                        Size = new System.Drawing.Size(8, 8),
                         TabStop = false,
                         Image = Image.FromFile("media/green_dot.png"),
-                        SizeMode = PictureBoxSizeMode.StretchImage
+                        SizeMode = PictureBoxSizeMode.StretchImage,
+                        BackColor = Color.Transparent
                     };
 
                     tab.Controls.Add(pictureBox_dot);
@@ -400,7 +402,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                     {
                         Name = "dot", // named dot so it gets deleted
                         AutoSize = true,
-                        Location = new System.Drawing.Point((int)red_dot_pos_width + 10, (int)red_dot_pos_height),
+                        Location = new System.Drawing.Point((int)red_dot_pos_width + 15, (int)red_dot_pos_height + 5),
                         Size = new System.Drawing.Size(100, 20),
                         TextAlign = ContentAlignment.MiddleCenter,
                         Text = player.simpleName
