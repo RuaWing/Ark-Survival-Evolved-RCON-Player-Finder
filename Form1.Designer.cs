@@ -48,7 +48,7 @@
             tab_page_config.Margin = new Padding(3, 2, 3, 2);
             tab_page_config.Name = "tab_page_config";
             tab_page_config.Padding = new Padding(3, 2, 3, 2);
-            tab_page_config.Size = new Size(1340, 635);
+            tab_page_config.Size = new Size(988, 635);
             tab_page_config.TabIndex = 0;
             tab_page_config.Text = "Config";
             tab_page_config.UseVisualStyleBackColor = true;
@@ -58,7 +58,7 @@
             richTextBox1.Location = new Point(255, 4);
             richTextBox1.Margin = new Padding(3, 2, 3, 2);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(1081, 632);
+            richTextBox1.Size = new Size(737, 632);
             richTextBox1.TabIndex = 6;
             richTextBox1.Text = "";
             // 
@@ -97,7 +97,7 @@
             tabControl1.Margin = new Padding(3, 2, 3, 2);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(1348, 663);
+            tabControl1.Size = new Size(996, 663);
             tabControl1.TabIndex = 0;
             // 
             // Form1
