@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             tab_page_config = new TabPage();
+            labelOperation = new Label();
             label2 = new Label();
             intervalNumericUpDown1 = new NumericUpDown();
             label1 = new Label();
@@ -44,6 +45,7 @@
             // 
             // tab_page_config
             // 
+            tab_page_config.Controls.Add(labelOperation);
             tab_page_config.Controls.Add(label2);
             tab_page_config.Controls.Add(intervalNumericUpDown1);
             tab_page_config.Controls.Add(label1);
@@ -59,6 +61,16 @@
             tab_page_config.TabIndex = 0;
             tab_page_config.Text = "Home";
             tab_page_config.UseVisualStyleBackColor = true;
+            // 
+            // labelOperation
+            // 
+            labelOperation.AutoSize = true;
+            labelOperation.ForeColor = Color.Red;
+            labelOperation.Location = new Point(33, 74);
+            labelOperation.Name = "labelOperation";
+            labelOperation.Size = new Size(54, 15);
+            labelOperation.TabIndex = 10;
+            labelOperation.Text = "Stopped.";
             // 
             // label2
             // 
@@ -125,7 +137,7 @@
             button_connect.Name = "button_connect";
             button_connect.Size = new Size(82, 22);
             button_connect.TabIndex = 0;
-            button_connect.Text = "Start";
+            button_connect.Text = "START";
             button_connect.UseVisualStyleBackColor = true;
             button_connect.Click += Button_connect_Click;
             // 
@@ -166,5 +178,6 @@
         private NumericUpDown intervalNumericUpDown1;
         private Label label1;
         private Label label2;
+        private Label labelOperation;
     }
 }

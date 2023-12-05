@@ -1,6 +1,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Diagnostics;
+using System.Drawing.Text;
 using System.Timers;
 
 
@@ -67,6 +68,8 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                 Label label_map_name = new();
                 Label label_server_port = new();
                 Label label_server_ip = new();
+                Label label_operation = new();
+                Label label_interaval = new();
 
                 label_server_name.AutoSize = true;
                 label_server_name.Location = new System.Drawing.Point(10, 22);
@@ -153,13 +156,31 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
 
         private void Button_connect_Click(object sender, EventArgs e)
         {
+            Boolean start = false;
+
+            if (this.button_connect.Text == "START") {
+                this.button_connect.Text = "STOP";
+                start = true;
+
+                labelOperation.ForeColor = Color.Green;
+                labelOperation.Text = "Running...";
+            }
+            else
+            {
+                this.button_connect.Text = "START";
+                start = false;
+
+                labelOperation.ForeColor = Color.Red;
+                labelOperation.Text = "Stopped.";
+            }
+
             foreach (Server_Info server in servers)
             {
                 //find the player list textbox to write back to
                 // asign it to the server
                 server.RichTextBox_local_list_textbox = (RichTextBox?)tabControl1.Controls.Find("richTextBox_" + server.serverName + server.mapName, true).FirstOrDefault();
                 server.send_command_timer.Interval = (double)this.intervalNumericUpDown1.Value;
-                server.send_command_timer.Enabled = true;
+                server.send_command_timer.Enabled = start;
             }
         }
 
