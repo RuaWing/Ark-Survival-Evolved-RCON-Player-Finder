@@ -106,7 +106,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                 RichTextBox richTextBox_player_list = new()
                 {
                     Location = new System.Drawing.Point(10, 150),
-                    Name = "richTextBox_" + server.mapName,
+                    Name = "richTextBox_" + server.serverName + server.mapName,
                     Size = new System.Drawing.Size(300, 400),
                     TabIndex = 6,
                     Text = ""
@@ -157,7 +157,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
             {
                 //find the player list textbox to write back to
                 // asign it to the server
-                server.RichTextBox_local_list_textbox = (RichTextBox?)tabControl1.Controls.Find("richTextBox_" + server.mapName, true).FirstOrDefault();
+                server.RichTextBox_local_list_textbox = (RichTextBox?)tabControl1.Controls.Find("richTextBox_" + server.serverName + server.mapName, true).FirstOrDefault();
                 server.send_command_timer.Enabled = true;
             }
         }
@@ -168,7 +168,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
             {
                 //find the player list textbox to write back to
                 // asign it to the server
-                server.RichTextBox_local_list_textbox = (RichTextBox?)tabControl1.Controls.Find("richTextBox_" + server.mapName, true).FirstOrDefault();
+                server.RichTextBox_local_list_textbox = (RichTextBox?)tabControl1.Controls.Find("richTextBox_" + server.serverName + server.mapName, true).FirstOrDefault();
                 server.send_command_timer.Interval = (double)this.intervalNumericUpDown1.Value;
             }
         }

@@ -72,14 +72,14 @@
             // intervalNumericUpDown1
             // 
             intervalNumericUpDown1.Location = new Point(124, 115);
-            intervalNumericUpDown1.Maximum = new decimal(new int[] { 60000, 0, 0, 0 });
+            intervalNumericUpDown1.Maximum = new decimal(new int[] { 300000, 0, 0, 0 });
             intervalNumericUpDown1.Minimum = new decimal(new int[] { 500, 0, 0, 0 });
             intervalNumericUpDown1.Name = "intervalNumericUpDown1";
             intervalNumericUpDown1.Size = new Size(82, 23);
             intervalNumericUpDown1.TabIndex = 8;
             intervalNumericUpDown1.TextAlign = HorizontalAlignment.Center;
             intervalNumericUpDown1.ThousandsSeparator = true;
-            intervalNumericUpDown1.Value = new decimal(new int[] { 1000, 0, 0, 0 });
+            intervalNumericUpDown1.Value = new decimal(new int[] { 5000, 0, 0, 0 });
             intervalNumericUpDown1.ValueChanged += numericUpDown1_ValueChanged;
             // 
             // label1
@@ -124,7 +124,7 @@
             button_connect.Name = "button_connect";
             button_connect.Size = new Size(82, 22);
             button_connect.TabIndex = 0;
-            button_connect.Text = "Connect";
+            button_connect.Text = "Start";
             button_connect.UseVisualStyleBackColor = true;
             button_connect.Click += Button_connect_Click;
             // 
