@@ -9,14 +9,14 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
     public partial class Form1 : Form
     {
         // Create an instance of RconClient pointing to an IP and a PORT
-        
+
         private readonly List<Server_Info> servers = new();
-        
+
 
         public Form1()
         {
             InitializeComponent();
-            
+
             // load the config.json file
             string json_file_as_string = File.ReadAllText("config.json");
 
@@ -35,7 +35,7 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
             JArray? server_info = JObject.Parse(json_file_as_string)["servers"] as JArray;
 
             // iterate over each server and create a new Server_Info instance with the data scraped from the config.json file.
-            foreach (JObject item in server_info!) 
+            foreach (JObject item in server_info!)
             {
                 string? name = item.GetValue("name")?.ToString();
                 string? ip = item.GetValue("ip")?.ToString();
@@ -148,6 +148,17 @@ namespace Ark_Survival_Evolved_RCON_Player_Finder
                 // asign it to the server
                 server.RichTextBox_local_list_textbox = (RichTextBox?)tabControl1.Controls.Find("richTextBox_" + server.name, true).FirstOrDefault();
                 server.send_command_timer.Enabled = true;
+            }
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            foreach (Server_Info server in servers)
+            {
+                //find the player list textbox to write back to
+                // asign it to the server
+                server.RichTextBox_local_list_textbox = (RichTextBox?)tabControl1.Controls.Find("richTextBox_" + server.name, true).FirstOrDefault();
+                server.send_command_timer.Interval = (double)this.intervalNumericUpDown1.Value;
             }
         }
     }

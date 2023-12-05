@@ -29,17 +29,24 @@
         private void InitializeComponent()
         {
             tab_page_config = new TabPage();
+            label2 = new Label();
+            intervalNumericUpDown1 = new NumericUpDown();
+            label1 = new Label();
             richTextBox1 = new RichTextBox();
             textBox_set_name = new TextBox();
             label_set_name = new Label();
             button_connect = new Button();
             tabControl1 = new TabControl();
             tab_page_config.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)intervalNumericUpDown1).BeginInit();
             tabControl1.SuspendLayout();
             SuspendLayout();
             // 
             // tab_page_config
             // 
+            tab_page_config.Controls.Add(label2);
+            tab_page_config.Controls.Add(intervalNumericUpDown1);
+            tab_page_config.Controls.Add(label1);
             tab_page_config.Controls.Add(richTextBox1);
             tab_page_config.Controls.Add(textBox_set_name);
             tab_page_config.Controls.Add(label_set_name);
@@ -50,8 +57,39 @@
             tab_page_config.Padding = new Padding(3, 2, 3, 2);
             tab_page_config.Size = new Size(988, 635);
             tab_page_config.TabIndex = 0;
-            tab_page_config.Text = "Config";
+            tab_page_config.Text = "Home";
             tab_page_config.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(212, 123);
+            label2.Name = "label2";
+            label2.Size = new Size(22, 15);
+            label2.TabIndex = 9;
+            label2.Text = "ms";
+            // 
+            // intervalNumericUpDown1
+            // 
+            intervalNumericUpDown1.Location = new Point(124, 115);
+            intervalNumericUpDown1.Maximum = new decimal(new int[] { 60000, 0, 0, 0 });
+            intervalNumericUpDown1.Minimum = new decimal(new int[] { 500, 0, 0, 0 });
+            intervalNumericUpDown1.Name = "intervalNumericUpDown1";
+            intervalNumericUpDown1.Size = new Size(82, 23);
+            intervalNumericUpDown1.TabIndex = 8;
+            intervalNumericUpDown1.TextAlign = HorizontalAlignment.Center;
+            intervalNumericUpDown1.ThousandsSeparator = true;
+            intervalNumericUpDown1.Value = new decimal(new int[] { 1000, 0, 0, 0 });
+            intervalNumericUpDown1.ValueChanged += numericUpDown1_ValueChanged;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(54, 117);
+            label1.Name = "label1";
+            label1.Size = new Size(49, 15);
+            label1.TabIndex = 7;
+            label1.Text = "Interlval";
             // 
             // richTextBox1
             // 
@@ -111,6 +149,7 @@
             Text = "Ark Player Finder";
             tab_page_config.ResumeLayout(false);
             tab_page_config.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)intervalNumericUpDown1).EndInit();
             tabControl1.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -123,5 +162,8 @@
         private Button button_connect;
         private TabControl tabControl1;
         private RichTextBox richTextBox1;
+        private NumericUpDown intervalNumericUpDown1;
+        private Label label1;
+        private Label label2;
     }
 }
